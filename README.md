@@ -7,25 +7,25 @@
 ███████╝ ╚██████╔╝      ██║  ██║ ██║   ██║
   ╚════╝  ╚═════╝       ╚═╝  ╚═╝ ╚██████╔╝
                                       ██║
-                                      ╚═╝
-    </pre>
+                                      ╚═╝</pre>
 </div>
+
 ## About Me
 
 - Active on GitHub — building and sharing projects
-- Learning data structures, algorithms, and web technologies
+- Learning goals: scalable systems design, , innovation development
+- What I build: small web projects, hardware-software prototype projects and miscellaneous stuff
+- My Approach: clean code (try to), automated tasks, and good documentation
 - Interested in full-stack development and open-source
 
 ## Skill Set
 
-| Frontend | Languages | Tools & Others |
-|---|---|---|
-| <img src="https://skillicons.dev/icons?i=html,css,js&perline=5" alt="frontend"/> | <img src="https://skillicons.dev/icons?i=cpp,python,visualbasic&perline=4" alt="languages"/> | <img src="https://skillicons.dev/icons?i=git,github,vscode,nodejs,powershell,bash,linux,ajax&perline=8" alt="tools"/> |
+<img src="https://skillicons.dev/icons?i=cpp,py,php,bash,powershell,js,css,html,git,vscode,pycharm,arduino,stackoverflow,mysql,linux,blender&perline=12" alt="frontend"/>
 
-## Connect with me
+## Connect with me & More
 
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat&logo=github&logoColor=white)](https://github.com/8041q) 
-[![Email](https://img.shields.io/badge/-Email-D14836?style=flat&logo=gmail&logoColor=white)](mailto:hello@8041q.dev)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME)
+[![ant.toys](https://img.shields.io/badge/-ant.toys-7C3AED?style=flat)](https://ant.toys)
 
 ## GitHub Stats
 
@@ -43,5 +43,6 @@
 </p>
 
 ---
-
-Built from the `profile.html` layout — edit this `profile.md` and push to your repo to display as a README.
+<div align="center">
+<pre>© 2001 — Compiled at midnight and fueled by coffee, chaos and fairy dust™</pre>
+</div>
