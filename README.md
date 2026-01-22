@@ -13,10 +13,10 @@
 ## About Me
 
 - Active on GitHub — building and sharing projects
-- Learning goals: scalable systems design, , innovation development
-- What I build: small web projects, hardware-software prototype projects and miscellaneous stuff
+- Goals: create scalable systems design, develop innovation and get rid of imposter syndrome
+- What I've built: small web projects, hardware-software prototype projects and miscellaneous stuff
 - My Approach: clean code (try to), automated tasks, and good documentation
-- Interested in full-stack development and open-source
+- Interested in game development, full-stack development and open-source
 
 ## Skill Set
 
