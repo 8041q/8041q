@@ -30,10 +30,8 @@
 ## GitHub Stats
 
 <p align="center">
-  <a href="https://github.com/8041q">
-    <img height="160em" src="https://github-readme-stats.vercel.app/api?username=8041q&show_icons=true&theme=radical&include_all_commits=true&count_private=true" />
-    <img height="160em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=8041q&layout=compact&theme=radical" />
-  </a>
+    <img height="160em" src="https://github-readme-stats-fast.vercel.app/api?username=8041q&show_icons=true&theme=onedark" />
+    <img height="160em" src="https://github-readme-stats-fast.vercel.app/api/streak?username=8041q&theme=onedark" />
 </p>
 
 ## Activity
