@@ -13,26 +13,24 @@
 ## About Me
 
 - Active on GitHub — building and sharing projects
-- Goals: create scalable systems design, develop innovation and get rid of imposter syndrome
-- What I've built: small web projects, hardware-software prototype projects and miscellaneous stuff
-- My Approach: clean code (try to), automated tasks, and good documentation
+- Current focus: create scalable systems design, develop innovation and get rid of imposter syndrome
+- What I've built: small web projects, hardware-software prototype projects and experimental side projects
+- My Approach: clean code (try to), automated tasks, and good documentation that future‑me can actually understand
 - Interested in game development, full-stack development and open-source
 
 ## Skill Set
 
-<img src="https://skillicons.dev/icons?i=cpp,py,php,bash,powershell,js,css,html,git,vscode,pycharm,arduino,stackoverflow,mysql,linux,blender&perline=12" alt="frontend"/>
+<img src="https://skillicons.dev/icons?i=cpp,py,php,bash,powershell,js,css,html,git,vscode,pycharm,arduino,stackoverflow,mysql,linux,react,blender,ps,md&perline=12" alt="frontend"/>
+
+- Mainly working with: Python, Blender
+- Haven't touched in a while: C++, PHP
+- Recently started using: TypeScript, React
+- Want to learn next: Unity
 
 ## Connect with me & More
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/YOUR_LINKEDIN_USERNAME)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0A66C2?style=flat&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/guilhermetorq/)
 [![ant.toys](https://img.shields.io/badge/-ant.toys-7C3AED?style=flat)](https://ant.toys)
-
-## GitHub Stats
-
-<p align="center">
-    <img height="160em" src="https://github-readme-stats-fast.vercel.app/api?username=8041q&show_icons=true&theme=onedark" />
-    <img height="160em" src="https://github-readme-stats-fast.vercel.app/api/streak?username=8041q&theme=onedark" />
-</p>
 
 ## Activity
 
@@ -42,5 +40,5 @@
 
 ---
 <div align="center">
-<pre>© 2001 — Compiled at midnight and fueled by coffee, chaos and fairy dust™</pre>
+  <pre>© 2001–@today.YYYY · Compiled at midnight and fueled by coffee, chaos, and fairy dust™</pre>
 </div>
