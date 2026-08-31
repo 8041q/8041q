@@ -40,5 +40,5 @@
 
 ---
 <div align="center">
-  <pre>© 2001–2026 · Compiled at midnight and fueled by coffee, chaos, and fairy dust™</pre>
+  <pre>© 2001 · Compiled at midnight and fueled by coffee, chaos, and fairy dust™</pre>
 </div>
