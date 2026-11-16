@@ -1,46 +1,87 @@
-name: Update year in README
+
+name: Update README and YoRHa Card
 
 on:
   schedule:
-    # 1st of January at 00:00 UTC every year
+    # Update the year on January 1st at midnight UTC
     - cron: "0 0 1 1 *"
-  workflow_dispatch: # manual trigger
+
+    # Refresh YoRHa cards every 6 hours
+    - cron: "17 */6 * * *"
+
+  workflow_dispatch:
 
 permissions:
   contents: write
 
 jobs:
-  update-year:
+  update-profile:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
-        uses: actions/checkout@v4
+      # 1. Checkout your profile repository
+      - name: Checkout profile
+        uses: actions/checkout@v7
         with:
+          path: profile
           token: ${{ secrets.GITHUB_TOKEN }}
+          ref: ${{ github.ref }}
 
-      - name: Set up date env
-        run: echo "YEAR=$(date +'%Y')" >> $GITHUB_ENV
+      # 2. Get current year (annual schedule or manual run)
+      - name: Set up date environment
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 1 1 *'
+        run: echo "YEAR=$(date +'%Y')" >> "$GITHUB_ENV"
 
+      # 3. Update year placeholder
       - name: Replace placeholder in README
+        if: github.event_name == 'workflow_dispatch' || github.event.schedule == '0 0 1 1 *'
+        working-directory: profile
         run: |
-          sed -i "s/@today.YYYY/${YEAR}/g" README.md
+          sed -i "s/@today\.YYYY/${YEAR}/g" README.md
 
-      - name: Commit and push changes
+      # 4. Checkout YoRHa generator
+      - name: Checkout card generator
+        uses: actions/checkout@v7
+        with:
+          repository: yorha-dev/yorha_card_generator
+          path: generator
+          ref: main
+
+      # 5. Install Python
+      - name: Setup Python
+        uses: actions/setup-python@v7
+        with:
+          python-version: '3.14'
+
+      # 6. Generate YoRHa SVG cards
+      - name: Generate SVG
+        working-directory: generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if git diff --quiet; then
+          python generator.py --username 8041q
+
+      # 7. Copy generated cards into your profile
+      - name: Update profile cards
+        run: |
+          mkdir -p profile/assets
+          cp generator/output/*.svg profile/assets/
+
+      # 8. Commit and push everything
+      - name: Commit and push changes
+        working-directory: profile
+        env:
+          TARGET_BRANCH: ${{ github.ref_name }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git add README.md assets/languages-dark.svg assets/languages-light.svg
+
+          if git diff --cached --quiet; then
             echo "No changes to commit."
             exit 0
           fi
 
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-
-          CURRENT_BRANCH="${GITHUB_REF_NAME:-main}"
-          git checkout "$CURRENT_BRANCH"
-
-          git add README.md
-          git commit -m "chore: update year to ${YEAR}" || exit 0
-          git push origin "$CURRENT_BRANCH"
+          git commit -m "chore: update README and YoRHa cards"
+          git push origin "HEAD:${TARGET_BRANCH}"
