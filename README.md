@@ -39,6 +39,27 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=8041q&bg_color=071827&color=38bdf8&line=38bdf8&point=ffffff&area_color=0ea5a4&hide_border=true" alt="activity" height="220"/>
 </p>
 
+
+<h2 align="center">◈ MOST USED LANGUAGES</h2>
+
+<p align="center">
+  <picture>
+    <source
+      media="(prefers-color-scheme: dark)"
+      srcset="assets/languages-dark.svg"
+    />
+    <source
+      media="(prefers-color-scheme: light)"
+      srcset="assets/languages-light.svg"
+    />
+    <img
+      src="assets/languages-dark.svg"
+      width="100%"
+      alt="YoRHa Most Used Languages"
+    />
+  </picture>
+</p>
+
 ---
 <div align="center">
   <pre>© 2001 · Compiled at midnight and fueled by coffee, chaos, and fairy dust™</pre>
