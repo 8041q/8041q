@@ -39,8 +39,7 @@
   <img src="https://github-readme-activity-graph.vercel.app/graph?username=8041q&bg_color=071827&color=38bdf8&line=38bdf8&point=ffffff&area_color=0ea5a4&hide_border=true" alt="activity" height="220"/>
 </p>
 
-
-<h2 align="center">◈ MOST USED LANGUAGES</h2>
+<hr>
 
 <p align="center">
   <picture>
@@ -53,9 +52,9 @@
       srcset="assets/languages-light.svg"
     />
     <img
-      src="assets/languages-dark.svg"
+      src="assets/languages-light.svg"
       width="100%"
-      alt="YoRHa Most Used Languages"
+      alt="YoRHa - Glory to mankind"
     />
   </picture>
 </p>
