@@ -53,19 +53,64 @@ jobs:
         with:
           python-version: '3.14'
 
+      # DEBUG. Check Data
+      - name: Verify GitHub account data
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          curl -fsSL \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "Accept: application/vnd.github+json" \
+            "https://api.github.com/users/8041q/repos?type=owner&per_page=100" \
+            -o repos.json
+
+          python - <<'PY'
+          import json
+          from collections import Counter
+
+          with open("repos.json") as f:
+              repos = json.load(f)
+
+          print(f"Repositories found: {len(repos)}")
+
+          languages = Counter()
+
+          for repo in repos:
+              print(f"{repo['name']} - {repo['language']}")
+              if repo["language"]:
+                  languages[repo["language"]] += 1
+
+          print("\nLanguages found:")
+          for language, count in languages.most_common():
+              print(f"{language}: {count}")
+          PY
+          
       # 6. Generate YoRHa SVG cards
       - name: Generate SVG
         working-directory: generator
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
+          # Remove any previous generated files
+          rm -rf output
+
+          # Generate cards specifically for your account
           python generator.py --username 8041q
+
+          # Verify that both cards were generated
+          echo "Generated card files:"
+          ls -lh output/
+
+          test -s output/languages-dark.svg
+          test -s output/languages-light.svg
 
       # 7. Copy generated cards into your profile
       - name: Update profile cards
         run: |
           mkdir -p profile/assets
-          cp generator/output/*.svg profile/assets/
+
+          cp generator/output/languages-dark.svg profile/assets/
+          cp generator/output/languages-light.svg profile/assets/
 
       # 8. Commit and push everything
       - name: Commit and push changes
